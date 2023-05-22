@@ -12,8 +12,9 @@ jobs:
           fetch-depth: 0
       - uses: wagoid/commitlint-github-action@v5
         id: commitlint
-      - if: ${{ failure() && steps.commitlint.conclusion == "failed" }}
+      - if: ${{ failure() }}
         uses: marocchino/sticky-pull-request-comment@adca94abcaf73c10466a71cc83ae561fd66d1a56
         with:
           message: |
+            ${{steps.commitlint.conclusion}}
             Activate local hooks please
