@@ -15,5 +15,12 @@ jobs:
       - if: ${{ failure() && steps.commitlint.outcome == 'failure' }}
         uses: marocchino/sticky-pull-request-comment@adca94abcaf73c10466a71cc83ae561fd66d1a56
         with:
+          header: Commitlint
+          recreate: true
           message: |
             Activate local hooks please
+      - if: ${{ success() }}
+        uses: marocchino/sticky-pull-request-comment@adca94abcaf73c10466a71cc83ae561fd66d1a56
+        with:
+          header: Commitlint
+          delete: true
