@@ -18,7 +18,14 @@ jobs:
           header: Commitlint
           recreate: true
           message: |
-            Activate local hooks please
+            ## Wrong commit message format detected
+            We use [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716) in our project.
+  
+            Probably you forgot to activate local git hooks.
+            Run the next command in the project root to activate local hooks:
+            ```sh
+            sh ./install_hooks.sh
+            ```
       - if: ${{ success() }}
         uses: marocchino/sticky-pull-request-comment@adca94abcaf73c10466a71cc83ae561fd66d1a56
         with:
