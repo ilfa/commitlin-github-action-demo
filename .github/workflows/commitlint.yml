@@ -36,3 +36,12 @@ jobs:
           header: Commitlint
           hide: true
           hide_classify: "OUTDATED"
+  release-comment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - run: |
+          npm install @semantic-release/changelog @semantic-release/git
+          npx semantic-release-github-pr
