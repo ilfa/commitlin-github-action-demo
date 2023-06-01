@@ -43,8 +43,4 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - run: |
-          npm install semantic-release@17.2.1 semantic-release-github-pr@6.0.1 @semantic-release/changelog@5.0.1 @semantic-release/git@9.0.1
-          npx semantic-release-github-pr --debug
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: fingerprintjs/action-semantic-release-info@2b3390e01657efb48ad83a8538bab5aa4f33f6f0
