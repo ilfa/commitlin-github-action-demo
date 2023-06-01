@@ -43,5 +43,5 @@ jobs:
         with:
           fetch-depth: 0
       - run: |
-          npm install @semantic-release/changelog
+          npm install @semantic-release/changelog @semantic-release/git
           npx semantic-release-github-pr
