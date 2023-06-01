@@ -45,6 +45,6 @@ jobs:
           fetch-depth: 0
       - run: |
           npm install semantic-release@17.2.1 semantic-release-github-pr@6.0.1 @semantic-release/changelog@5.0.1 @semantic-release/git@9.0.1
-          npx semantic-release-github-pr --debug
+          unset GITHUB_ACTIONS && npx semantic-release-github-pr --debug
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
