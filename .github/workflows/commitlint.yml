@@ -43,7 +43,7 @@ jobs:
         with:
           fetch-depth: 0
       - run: |
-          npm install @semantic-release/commit-analyzer
+          npm install semantic-release @semantic-release/commit-analyzer
       - name: Generate release notes
         id: release-notes-preview
         uses: guilhermetod/semantic-release-notes-preview@v1.0.0
