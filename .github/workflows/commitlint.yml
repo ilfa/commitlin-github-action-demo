@@ -43,4 +43,4 @@ jobs:
         with:
           fetch-depth: 0
       - run: |
-          npx semantic-release-github-pr
+          npx semantic-release-github-pr -p @semantic-release/changelog
