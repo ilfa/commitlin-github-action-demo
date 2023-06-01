@@ -36,3 +36,12 @@ jobs:
           header: Commitlint
           hide: true
           hide_classify: "OUTDATED"
+  release-comment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Generate release notes
+        id: release-notes-preview
+        uses: guilhermetod/semantic-release-notes-preview@v1.0.0
