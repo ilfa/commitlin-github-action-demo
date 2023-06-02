@@ -43,6 +43,6 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: fingerprintjs/action-semantic-release-info@44622099a3214ed98bc626d5c8897359129bac40
+      - uses: fingerprintjs/action-semantic-release-info@48aff59c2f0114bc724f6b515fff51f3ad2dc52a
         with:
           currentBranch: ${{ github.head_ref }}
