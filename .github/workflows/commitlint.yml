@@ -45,7 +45,7 @@ jobs:
           fetch-depth: 0
       - name: Collect semantic-release-info
         id: semantic_release_info
-        uses: fingerprintjs/action-semantic-release-info@e097f1b8fc577b332cf5b07f34be1e6ef04b7be7
+        uses: fingerprintjs/action-semantic-release-info@a0820c74a403625325d05dfde6a0c5228c03bd4e
       - if: ${{ steps.semantic_release_info.outcome != 'failure' }}
         name: Add comment to the PR
         uses: marocchino/sticky-pull-request-comment@3d60a5b2dae89d44e0c6ddc69dd7536aec2071cd
