@@ -43,4 +43,4 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: fingerprintjs/action-semantic-release-info@23103cdad87901e98d41122c7d05ad8636f44bf4
+      - uses: fingerprintjs/action-semantic-release-info@7a05a45d7457c0d0d388db8c3496908e04e580f7
