@@ -47,4 +47,4 @@ jobs:
         run: git checkout $GITHUB_HEAD_REF
       - uses: fingerprintjs/action-semantic-release-info@30765ef87698de0f0a907ca0ce094ef367f6c330
         with:
-          currentBranch: ${{ github.ref_name }}
+          currentBranch: ${{ github.event.pull_request.base.ref }}
