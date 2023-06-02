@@ -54,7 +54,8 @@ jobs:
           recreate: true
           message: |
             ## This PR will create a ${{steps.semantic_release_info.outputs.type}} release :rocket:
-
+            ${{ steps.semantic_release_info.conclusion }}
+            ${{ steps.semantic_release_info.outcome }}
             ${{steps.semantic_release_info.outputs.notes}}
       - if: ${{ steps.semantic_release_info.conclusion == 'failure' }}
         name: Add comment to the PR
