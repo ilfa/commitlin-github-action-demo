@@ -45,4 +45,4 @@ jobs:
           fetch-depth: 0
       - name: Checkout branch
         run: git checkout $GITHUB_HEAD_REF
-      - uses: fingerprintjs/action-semantic-release-info@e6d505fe4b1231a0a4d5d20e90046a81351a06c6
+      - uses: fingerprintjs/action-semantic-release-info@96fe94c23d60d28400aeb5f7944ba9e550df0360
