@@ -54,8 +54,6 @@ jobs:
           recreate: true
           message: |
             ## This PR will create a ${{steps.semantic_release_info.outputs.type}} release :rocket:
-            ${{ steps.semantic_release_info.conclusion }}
-            ${{ steps.semantic_release_info.outcome }}
             ${{steps.semantic_release_info.outputs.notes}}
       - if: ${{ steps.semantic_release_info.outputs.no_release }}
         name: Add comment to the PR
@@ -64,4 +62,4 @@ jobs:
           header: ReleasePreview
           recreate: true
           message: |
-            ## This PR will not create a new release
+            ## This PR will not create a new release :rocket:
