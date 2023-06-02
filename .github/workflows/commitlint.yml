@@ -56,7 +56,7 @@ jobs:
             ## This PR will create a ${{steps.semantic_release_info.outputs.type}} release :rocket:
             ${{ steps.semantic_release_info.outputs.no_release }}
             ${{steps.semantic_release_info.outputs.notes}}
-      - if: ${{ steps.semantic_release_info.outputs.no_release }}
+      - if: ${{ steps.semantic_release_info.outputs.no_release == 'true' }}
         name: Add comment to the PR
         uses: marocchino/sticky-pull-request-comment@3d60a5b2dae89d44e0c6ddc69dd7536aec2071cd
         with:
