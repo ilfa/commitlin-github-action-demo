@@ -45,4 +45,6 @@ jobs:
           fetch-depth: 0
       - name: Checkout branch
         run: git checkout $GITHUB_HEAD_REF
-      - uses: fingerprintjs/action-semantic-release-info@263a3685ac882559a7cf1b1910c96a22e1669eb5
+      - uses: fingerprintjs/action-semantic-release-info@30765ef87698de0f0a907ca0ce094ef367f6c330
+        with:
+          currentBranch: ${{ github.ref_name }}
