@@ -44,5 +44,5 @@ jobs:
         with:
           fetch-depth: 0
       - name: Collect semantic-release-info
-        uses: fingerprintjs/action-semantic-release-info@13c81fc709fc4f63cb86090ef30781950dde8717
+        uses: fingerprintjs/action-semantic-release-info@de74baef8f093422973643554b98a1050693bf14
 
