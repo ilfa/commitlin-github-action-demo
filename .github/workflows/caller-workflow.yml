@@ -1,0 +1,11 @@
+name: Caller workflow
+
+on:
+  push:
+
+jobs:
+  call_reusable_workflow:
+    name: 'Call reusable workflow'
+    uses: ilfa/reusable-workflow-test/./.github/workflows/reusable-workflow.yml@main
+    secrets:
+      envPAT2: ${{ secrets.envPAT }}
